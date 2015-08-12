@@ -121,7 +121,7 @@ module Devise
       # Reset invitation token and send invitation again
       def invite!(invited_by = nil)
         was_invited = invited_to_sign_up?
-
+        debugger
         # Required to workaround confirmable model's confirmation_required? method
         # being implemented to check for non-nil value of confirmed_at
         if self.new_record? && self.respond_to?(:confirmation_required?, true)
